@@ -296,12 +296,12 @@ class BaspiEdge_one(polyinterface.Node):
     hint = [1,2,3,4]
     drivers = [
         {'driver': 'ST', 'value': 0, 'uom': 2},
-        {'driver': 'GV0', 'value': 1, 'uom': 17},
-        {'driver': 'GV1', 'value': 1, 'uom': 17},
-        {'driver': 'GV2', 'value': 1, 'uom': 17},
-        {'driver': 'GV3', 'value': 1, 'uom': 17},
-        {'driver': 'GV4', 'value': 1, 'uom': 17},
-        {'driver': 'GV5', 'value': 1, 'uom': 17},
+        {'driver': 'GV0', 'value': 1, 'uom': 56},
+        {'driver': 'GV1', 'value': 1, 'uom': 56},
+        {'driver': 'GV2', 'value': 1, 'uom': 56},
+        {'driver': 'GV3', 'value': 1, 'uom': 56},
+        {'driver': 'GV4', 'value': 1, 'uom': 56},
+        {'driver': 'GV5', 'value': 1, 'uom': 56},
         {'driver': 'GV6', 'value': 1, 'uom': 80},
         {'driver': 'GV7', 'value': 1, 'uom': 80},
         {'driver': 'GV8', 'value': 1, 'uom': 80},

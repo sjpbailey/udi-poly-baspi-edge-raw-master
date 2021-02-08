@@ -6,6 +6,9 @@
     <editor id="FAHVAL">
         <range uom="17" min="0" max="1000" prec="4" />
     </editor>
+    <editor id="RAWVAL">
+        <range uom="56" min="0" max="1000" prec="4" />    
+    </editor>
     <editor id="STATUS">
         <range uom="80" subset="0,1" />
     </editor>
