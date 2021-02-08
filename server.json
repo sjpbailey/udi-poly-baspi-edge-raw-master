@@ -10,12 +10,12 @@
     "shortPoll": "60",
     "longPoll": "240",
     "testMode": true,
-    "profile_version": "2.0.1",
+    "profile_version": "2.0.2",
     "credits": [
       {
           "title": "Contemporary Controls BASpi-Edge 6U6R Control Module",
           "author": "Steven Bailey (sjpbailey)",
-          "version": "2.0.1",
+          "version": "2.0.2",
           "date": "November 16, 2020",
           "source": "https://github.com/sjpbailey/udi-poly-baspi-edge-master",
           "license": "https://github.com/sjpbailey/udi-poly-baspi-edge-master/LICENSE"
