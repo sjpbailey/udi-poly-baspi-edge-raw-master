@@ -1,0 +1,32 @@
+{
+    "name": "BASEdgeRaw",
+    "docs": "https://github.com/sjpbailey/udi-poly-baspi-edge-master",
+    "type": "python3",
+    "executable": "baspi-edge-raw.py",
+    "install": "install.sh",
+    "install_cloud": "install_cloud.sh",
+    "description": "BASpi Edge Node Server for general home automation with raw value inputs",
+    "notice": "Use at Your own Risk",
+    "shortPoll": "60",
+    "longPoll": "240",
+    "testMode": true,
+    "profile_version": "2.0.1",
+    "credits": [
+      {
+          "title": "Contemporary Controls BASpi-Edge 6U6R Control Module",
+          "author": "Steven Bailey (sjpbailey)",
+          "version": "2.0.1",
+          "date": "November 16, 2020",
+          "source": "https://github.com/sjpbailey/udi-poly-baspi-edge-master",
+          "license": "https://github.com/sjpbailey/udi-poly-baspi-edge-master/LICENSE"
+      }
+    ],
+    "store": {
+      "developer": "sjpbailey@comcast.net",
+      "price": 0.01,
+      "recurring": 0,
+      "recurring_interval": "month",
+      "recurring_period": 0
+    }
+  }
+  
