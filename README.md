@@ -43,7 +43,10 @@ Please see configuration quick start link above. On page two, it shows the GUI f
 
 [Universal Input Configuration Viedo](https://www.youtube.com/watch?v=hTd1mR7npP4)
 
-* Python 3.7.7
+* Requirments
+* requirments [bascontrol_ns](https://pypi.org/project/bascontrolns/) module pip install bascontrolns
+* requests
+* polyinterface
 
 * Supported Nodes
   * Six 6 Universal Inputs
