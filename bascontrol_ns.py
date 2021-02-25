@@ -13,13 +13,14 @@ import time
 class Platform(Enum):
 
     """BAScontrol platform (hardware) types"""
-
+    # Platform ID             Platform Response   
     BASC_NONE = 0
-    BASC_20  = 0
-    BASC_PI  = 1
-    BASC_AO  = 2
+    BASC_20  = 0 ## BASControl Series I20 I20C I22 I22C
+    BASC_PI  = 1 # '<rdom rsp="ack">BASpi 6U/6R</rdom>'
+    BASC_AO  = 2 # '<rdom rsp="ack">BASpi 6U/4R/2AO</rdom>'
     BASC_PO  = 3
-    BASC_ED  = 4
+    BASC_ED  = 4 # '<rdom rsp="ack">BASpi-Edge 6/6</rdom>'
+    BASC_EO  = 5 # from BASemulator BASpi-Edge 6/4/2
 
 
 ###############################################################################
@@ -58,17 +59,19 @@ def getPlatform(sModel):
     """Returns the Platform type given the model (BASconrol22, etc.)"""
 
     eRetval = Platform.BASC_NONE
-    if sModel.find('20') != -1:
+    if sModel.find('20') != -1:      ## BASControl Series I20 I20C I22 I22C
         eRetval = Platform.BASC_20
-    elif sModel.find('6R') != -1:
+    elif sModel.find('6R') != -1:    ## '<rdom rsp="ack">BASpi 6U/6R</rdom>'
         eRetval = Platform.BASC_PI
-    elif sModel.find('PI') != -1:
+    elif sModel.find('PI') != -1:    ### '<rdom rsp="ack">BASpi 6U/6R</rdom>' original PI
         eRetval = Platform.BASC_PO
-    elif sModel.find('2AO') != -1:
+    elif sModel.find('2AO') != -1:   ## '<rdom rsp="ack">BASpi 6U/4R/2AO</rdom>'
         eRetval = Platform.BASC_AO 
     elif sModel.find('6') != -1:
-        eRetval = Platform.BASC_ED       
-    return eRetval
+        eRetval = Platform.BASC_ED   ## '<rdom rsp="ack">BASpi-Edge 6/6</rdom>'
+    elif sModel.find('2') != -1:
+        eRetval = Platform.BASC_EO   ## BASpi-Edge 6/4/2           
+    return eRetval                   
 
 
 ###############################################################################
@@ -159,10 +162,11 @@ class Device:
         self.ePlatform = getPlatform(self.sModel)
         # Assign the number of IO.
         if self.ePlatform == Platform.BASC_20:
-            self.uiQty = 6
-            self.biQty = 0
-            self.aoQty = 0
-            self.boQty = 6
+            self.uiQty = 8
+            self.biQty = 4
+            self.aoQty = 4
+            self.boQty = 4
+            self.vtQty = 24
         elif self.ePlatform == Platform.BASC_PI:
             self.uiQty = 6
             self.biQty = 0
@@ -185,7 +189,12 @@ class Device:
             self.biQty = 0
             self.aoQty = 0
             self.boQty = 6
-            self.vtQty = 24        
+            self.vtQty = 24 
+        elif self.ePlatform == Platform.BASC_EO:
+             self.uiQty = 6
+             self.biQty = 0
+             self.aoQty = 2
+             self.boQty = 4       
             # Assign 0-based index values.
         self.uiBase = 0
         self.biBase = self.uiQty
