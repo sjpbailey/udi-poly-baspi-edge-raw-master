@@ -159,8 +159,6 @@ class BaspiEdge_one(polyinterface.Node):
                 LOGGER.info('ipaddress')
             if self.bc.ePlatform == Platform.BASC_PI:
                 LOGGER.info('connected to BASpi6U6R Module ONE')
-            if self.bc.ePlatform == Platform.BASC_AO:
-                LOGGER.info('connected to BASpi6U4R2AO Module ONE')
             if self.bc.ePlatform == Platform.BASC_ED:
                 LOGGER.info('connected to BASpi-Edge Module ONE')    
                 self.setDriver('ST', 1)    
