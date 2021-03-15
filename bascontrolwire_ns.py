@@ -64,7 +64,9 @@ def getPlatform(sModel):
     elif sModel.find('PI') != -1:
         eRetval = Platform.BASC_PO
     elif sModel.find('2AO') != -1:
-        eRetval = Platform.BASC_AO    
+        eRetval = Platform.BASC_AO
+    elif sModel.find('6') != -1:
+        eRetval = Platform.BASC_ED   ## '<rdom rsp="ack">BASpi-Edge 6/6</rdom>'        
     return eRetval
 
 
@@ -176,7 +178,13 @@ class Device:
             self.biQty = 0
             self.aoQty = 0
             self.boQty = 6
-            self.vtQty = 24    
+            self.vtQty = 24
+        elif self.ePlatform == Platform.BASC_ED:
+            self.uiQty = 6
+            self.biQty = 0
+            self.aoQty = 0
+            self.boQty = 6
+            self.vtQty = 24         
             # Assign 0-based index values.
         self.uiBase = 0
         self.biBase = self.uiQty

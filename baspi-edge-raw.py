@@ -7,8 +7,8 @@ import time
 import requests
 from requests.auth import HTTPBasicAuth
 import xml.etree.ElementTree as ET
-import bascontrolns
-from bascontrolns import Device, Platform
+import bascontrolwire_ns
+from bascontrolwire_ns import Device, Platform
 
 LOGGER = polyinterface.LOGGER
 
